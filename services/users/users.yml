@@ -1,0 +1,14 @@
+verify-token:
+  handler: services/users/usersHandler.verifyToken
+login:
+  handler: services/users/usersHandler.login
+  events:
+    - http:
+        path: login
+        method: post
+register:
+  handler: services/users/usersHandler.register
+  events:
+    - http:
+        path: register
+        method: post

@@ -1,0 +1,20 @@
+upload-image:
+  handler: services/images/imagesHandler.uploadImage
+  events:
+    - http:
+        path: images
+        method: post
+        cors: true
+        authorizer:
+          name: verify-token
+          identitySource: method.request.header.Authorization 
+          resultTtlInSeconds: 3600
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "s3:GetObject"
+      Resource: "arn:aws:s3:::${env:BUCKET}/*"
+    - Effect: "Allow"
+      Action:
+        - "s3:PutObject"
+      Resource: "arn:aws:s3:::${env:BUCKET}/*"
