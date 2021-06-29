@@ -27,7 +27,7 @@ POST https://hgdek56d34.execute-api.us-east-1.amazonaws.com/prod/register
 Body:
 ```json
 {
-    "email": "teste@gmail.com",
+    "email": "test@gmail.com",
     "password": "test123",
     "name": "Test"
 }
