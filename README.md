@@ -39,8 +39,8 @@ POST https://hgdek56d34.execute-api.us-east-1.amazonaws.com/prod/login
 
 ```json
 {
-    "email": "teste@gmail.com",
-    "password": "teste123"
+    "email": "test@gmail.com",
+    "password": "test123"
 }
 ```
 
